@@ -2,4 +2,6 @@
     <string name="app_name">Giteer</string>
 
     <string name="login_login_title">登录</string>
+
+    <string name="login_personal_title">私人令牌</string>
 </resources>

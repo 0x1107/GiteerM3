@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,28 @@
     tools:context=".login.LoginActivity">
 
     <Button
-        android:id="@+id/material_icon_button"
-        style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/common_margin"
-        android:layout_marginRight="@dimen/common_margin"
-        android:text="@string/login_login_title"
-        app:icon="@drawable/ic_dialogs_24px"/>
+        android:id="@+id/login_personal_btn"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/login_personal_title"
+        />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <Button
+        android:id="@+id/login_login_btn"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        android:text="@string/login_login_title"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
