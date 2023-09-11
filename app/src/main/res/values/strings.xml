@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Giteer</string>
 
-    <string name="login_login_title">登录</string>
+    <string name="login_login_btn_title">登录</string>
 
-    <string name="login_personal_title">私人令牌</string>
+    <string name="login_personal_btn_title">私人令牌</string>
+
+    <string name="login_personal_title">隐私声明：Giteer不会从您的Gitee账号收集任何信息，请您放心使用，如果需要访问私有仓库请点击底部登录按钮进行OAuth授权</string>
+    <string name="login_personal_placeholder">请输入私人令牌</string>
+
+    <string name="dialog_login_accept">登录</string>
+    <string name="dialog_common_cancel">取消</string>
 </resources>
