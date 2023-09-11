@@ -35,6 +35,14 @@ public class WebActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest webResourceRequest) {
+                Log.i("WebActivity","当前URL:" + webResourceRequest.getUrl().toString());
+                String url = webResourceRequest.getUrl().toString();
+                if (url.contains(RedirectUri)){
+                    //拿到Code
+                    String[] strings = url.split("code=");
+                    String code = strings[strings.length - 1];
+                    Log.i("WebActivity","code:"+code);
+                }
                 return super.shouldOverrideUrlLoading(webView, webResourceRequest);
             }
         });
