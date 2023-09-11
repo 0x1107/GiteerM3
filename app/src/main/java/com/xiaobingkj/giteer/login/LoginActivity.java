@@ -5,6 +5,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.xiaobingkj.giteer.base.BaseActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,14 @@ public class LoginActivity extends BaseActivity {
                         })
                         .setNegativeButton(R.string.dialog_common_cancel, null)
                         .show();
+            }
+        });
+
+        binding.loginLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, WebActivity.class);
+                startActivity(intent);
             }
         });
     }

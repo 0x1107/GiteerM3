@@ -1,5 +1,6 @@
 package com.xiaobingkj.giteer.main;
 
+import com.tencent.mmkv.MMKV;
 import com.xiaobingkj.giteer.base.BaseActivity;
 
 import android.content.Intent;
@@ -15,7 +16,11 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        MMKV kv = MMKV.defaultMMKV();
+        //如果没有Token进入登录页面
+        if (kv.getString("token", "").length() == 0) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 }
